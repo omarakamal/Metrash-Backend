@@ -126,8 +126,6 @@ describe("POST /api/products/bulk (protected)", () => {
     ];
 
     const res = await request(app).post("/api/products/bulk").send(payload);
-    console.log("res",res)
-        console.log("All Products", await Product.find())
 
     expect(res.status).toBe(201);
     expect(res.body.insertedCount).toBe(2);
