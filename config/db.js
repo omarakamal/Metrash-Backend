@@ -14,7 +14,7 @@ async function connectDB(uri) {
     await mongoose.disconnect();
   }
 
-  await mongoose.connect(target, { dbName: "testdb" }); // dbName optional for Atlas URIs
+  await mongoose.connect(target, { dbName: "metrash" }); // dbName optional for Atlas URIs
   currentUri = target;
 }
 

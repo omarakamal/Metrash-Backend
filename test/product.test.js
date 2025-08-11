@@ -63,7 +63,7 @@ describe("POST /api/products (protected)", () => {
     const res = await request(app)
       .post("/api/products")
       .send({ name: "Yogurt", price: 0.99, description: "plain", imageUrl: "x" });
-    expect(res.status).toBe(200); // your route returns 200 json(createdProduct)
+    expect(res.status).toBe(201); // your route returns 200 json(createdProduct)
     expect(res.body).toMatchObject({ name: "Yogurt", price: 0.99 });
   });
 });

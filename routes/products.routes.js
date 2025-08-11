@@ -76,7 +76,7 @@ router.post("/",async (req,res)=>{
         const {name, price, description, imageUrl} = req.body
         const newProduct = {name, price, description, imageUrl}
         const createdProduct=  await Product.create(newProduct)
-        res.json(createdProduct)
+        res.status(201).json(createdProduct)
     }
     catch(error){
       console.log("Error",error)
